@@ -5,11 +5,16 @@ session_start();
 require('PDO.php');
 $pdo = bddConnect();
 
-if(empty($_POST["Téléphone"]) or empty($_POST["email"]) or empty($_POST["description"]) ){
-    header('Location: home.php');
+if($_SESSION["CompteType"]=='ADMIN'){
+
+    $user = $_POST['nom'];
+
+} else {
+
+    $user = $_SESSION["username"];
+
 }
 
-$user = $_SESSION["username"];
 $diplome = $_POST["diplome"];
 $telephone = $_POST["Téléphone"];
 $email = $_POST["email"];

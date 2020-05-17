@@ -66,7 +66,6 @@ if($_SESSION["CompteType"]=="CANDIDAT"){
     <button type='submit' name='IDCompte' value='$IDCompte'>Supprimer votre compte</button>
     </form>
     ";
-    var_dump($GLOBALS);
 }
 
 if($_SESSION["CompteType"]=="ENTREPRISE"){
@@ -107,19 +106,21 @@ if($_SESSION["CompteType"]=="ENTREPRISE"){
         <button type='submit' name='OffreID' value='$OffreID'>Regarder les candidatures</button>
         </form>
         " ;
-
-        echo"
+    }
+    echo"
         <form action='deletecompte.php' method='post' >
         <input type='hidden' name='CompteType' value='ENTREPRISE'>
         <button type='submit' name='IDCompte' value='$id'>Supprimer votre compte</button>
         </form>
         ";
-    }
 }
 
 if($_SESSION["CompteType"]=="ADMIN"){
 
-    echo "Bonjour l'admin <br>";
+    echo "Bonjour l'admin <br> <br>
+    <form action='deconnexion.php' method='post' >
+    <button type='submit'>Déconnexion</button>
+    </form>";
 
     $query = $pdo->prepare('SELECT * FROM offres');
     $query->execute(array());

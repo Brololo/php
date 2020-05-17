@@ -36,5 +36,4 @@ foreach($res as $postulat){
     </form>
 " ;
 }
-var_dump($GLOBALS);
 ?>

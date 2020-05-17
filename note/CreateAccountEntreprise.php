@@ -1,6 +1,6 @@
 <?php
 
-if(empty($_POST["nom"])){
+if(empty($_POST["nom"]) or empty($_POST["mdp"]) or empty($_POST["email"])){
     header('Location: index.php');
 } else {
 

@@ -42,5 +42,4 @@ Vous pouvez postuler avec le bouton suivant qui va envoyer votre cv à l'entrepr
 <input type='hidden' name='IDCOmpte' value='$IDCompte'>
 </form>"
 ;
-var_dump($GLOBALS);
 ?>
