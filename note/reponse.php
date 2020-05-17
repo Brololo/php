@@ -5,8 +5,6 @@ session_start();
 require('PDO.php');
 $pdo = bddConnect();
 
-var_dump($GLOBALS);
-
 $PostulatID = $_POST['PostulatID'];
 
 if($_POST['reponse']=="OUI"){
